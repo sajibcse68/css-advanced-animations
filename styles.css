@@ -5,6 +5,8 @@
   --black: #272727;
   --yellow: #fff200;
   --purple: #351435;
+  --purple: #351435;
+  --red: #f44336;
 }
 
 
@@ -119,7 +121,6 @@
 }
 
 /* Stretching Effect!  */
-
 .btn4 {
   padding: 30px 50px;
   font-size: 40px;
@@ -132,4 +133,24 @@
   font-weight: 900;
   letter-spacing: 10px;
   border: 7px solid var(--purple)
+}
+
+/* Stretching Effect!  */
+.btn5 {
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.btn5:before {
+  content: 'YEAH!';
+  background-color: var(--red);
+  transform: translateY(-100%);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.btn5:hover:before {
+  transform: translateY(0%);
 }
