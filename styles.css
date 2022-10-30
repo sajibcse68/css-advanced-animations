@@ -12,9 +12,10 @@
 .buttons-wrap {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin: 40px;
+  flex-wrap: wrap;
+  margin: 40px 80px;
 }
 
 .btn-cont {
@@ -30,7 +31,7 @@
   text-decoration: none;
   color: var(--black);
   font-family: sans-serif;
-  border: 5px solid var(--black);
+  border: 4px solid var(--black);
 }
 
 .btn:before {
@@ -117,3 +118,18 @@
   transform: rotateY(0deg);
 }
 
+/* Stretching Effect!  */
+
+.btn4 {
+  padding: 30px 50px;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -2px;
+  transition: all 0.5s;
+}
+
+.btn4:hover {
+  font-weight: 900;
+  letter-spacing: 10px;
+  border: 7px solid var(--purple)
+}
