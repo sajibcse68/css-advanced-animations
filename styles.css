@@ -17,7 +17,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  margin: 40px 80px;
+  margin: 40px 80px 200px 80px;
 }
 
 .btn-cont {
@@ -177,4 +177,43 @@
 
 .btn6:hover:before {
   transform: translateX(100%) rotate(45deg);
+}
+
+/* Two layers swapping effect!  */
+.btn7 {
+  overflow: hidden;
+  color: transparent;
+  transition: all 0.5s;
+}
+.btn7:before {
+  content: 'Hover Me!';
+  color: var(--black);
+  background-color: var(--yellow);
+  transform: translateX(0%);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.btn7:hover:before {
+  transform: translateX(100%) translateY(-100%);
+  ;
+}
+.btn7:after {
+  content: 'Hover Me!';
+  color: var(--black);
+  background-color: var(--yellow);
+  transform: translateX(-100%) translateY(100%);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.btn7:hover:after {
+  transform: translateX(0%) translateY(0%);
+  ;
 }
