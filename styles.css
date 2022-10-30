@@ -154,3 +154,27 @@
 .btn5:hover:before {
   transform: translateY(0%);
 }
+
+/* Glowing Effect!  */
+.btn6 {
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.btn6:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+.btn6:before {
+  content: '';
+  background-color: var(--black);
+  transform: translateX(-120%) rotate(45deg);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.btn6:hover:before {
+  transform: translateX(100%) rotate(45deg);
+}
