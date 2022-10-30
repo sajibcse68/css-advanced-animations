@@ -44,6 +44,17 @@
 
 }
 
+.btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+}
+
 .buttons-wrap a {
   flex: 0 0 48%;
 }
@@ -80,3 +91,29 @@
 .btn2:hover:before {
   transform: translateX(0%);
 }
+
+/* Creative Button Effect! */
+.btn3 {
+  /* overflow: hidden; */
+  transition: all 0.5s;
+}
+.btn3:hover {
+  color: var(--white);
+}
+.btn3:before {
+  background-color: var(--black);
+  transform: rotateX(90deg);
+  transition: all 0.5s;
+}
+.btn3:hover:before {
+  transform: rotateX(0deg);
+}
+.btn3:after {
+  background-color: var(--black);
+  transform: rotateY(90deg);
+  transition: all 0.5s;
+}
+.btn3:hover:after {
+  transform: rotateY(0deg);
+}
+
