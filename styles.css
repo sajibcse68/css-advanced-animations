@@ -4,6 +4,7 @@
   --white: #ffffff;
   --black: #272727;
   --yellow: #fff200;
+  --yellow2: #f6b93b;
   --purple: #351435;
   --purple: #351435;
   --red: #f44336;
@@ -415,7 +416,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   background-color: tomato;
   border-radius: 8px;
   transform: scale(0);
@@ -431,7 +432,7 @@
 .btn13 {
   position: relative;
   background-color: none;
-  color: var(--white); 
+  color: var(--white);
   border: none;
   /* overflow: hidden; */
   display: flex;
@@ -440,45 +441,120 @@
 .btn13:hover {
   color: var(--black);
 }
-.btn13:before{
+.btn13:before {
   content: '';
   position: absolute;
   top: -3px;
   left: -3px;
   width: 100%;
   height: 100%;
-  background-color:  blue;
+  background-color: blue;
   transition: all 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
   mix-blend-mode: multiply;
   transform-origin: top center;
-  z-index: -1
+  z-index: -1;
 }
 .btn13:hover:before {
   top: -6px;
   left: 0;
   transform: perspective(1000px) rotateX(75deg);
 }
-.btn13:after{
+.btn13:after {
   content: '';
   position: absolute;
   top: 3px;
   left: 3px;
   width: 100%;
   height: 100%;
-  background-color:  tomato ;
+  background-color: tomato;
   transition: all 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
   mix-blend-mode: multiply;
   transform-origin: bottom;
-  z-index: -1
+  z-index: -1;
 }
 .btn13:hover:after {
   top: 6px;
   left: 0;
   transform: perspective(1000px) rotateX(-75deg);
+}
+
+/* Splitted button effect! */
+.btn14 {
+  position: relative;
+  color: var(--yellow2);
+  border: 3px solid var(--yellow2);
+  display: flex;
+  justify-content: center;
+  transform: all 0.5s;
+  overflow: hidden;
+}
+.btn14:hover {
+  color: var(--black);
+}
+.btn14:before,
+.btn14:after {
+  content: '';
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--yellow2);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: top center;
+  z-index: -1;
+}
+.btn14:before {
+  top: 0;
+  left: -25%;
+}
+.btn14:after {
+  top: -100%;
+  left: 25%;
+}
+.btn14:hover:before {
+  top: 0;
+  left: 0;
+}
+.btn14:hover:after {
+  top: 0;
+  left: 25%;
+}
+
+.btn14 span:before,
+.btn14 span:after {
+  content: '';
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--yellow2);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: top center;
+  z-index: -1;
+}
+.btn14 span:before {
+  top: 0;
+  right: -25%;
+}
+.btn14 span:after {
+  bottom: -100%;
+  right: 25%;
+}
+.btn14:hover span:before {
+  top: 0;
+  right: 0;
+}
+.btn14:hover span:after {
+  bottom: 0;
+  right: 25%;
 }
