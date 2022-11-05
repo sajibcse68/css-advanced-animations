@@ -9,8 +9,6 @@
   --red: #f44336;
 }
 
-
-
 .buttons-wrap {
   display: flex;
   flex-direction: row;
@@ -44,7 +42,6 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-
 }
 
 .btn:after {
@@ -55,13 +52,11 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-
 }
 
 .buttons-wrap a {
   flex: 0 0 48%;
 }
-
 
 /* Rotating Button Effect! */
 .btn1 {
@@ -132,7 +127,7 @@
 .btn4:hover {
   font-weight: 900;
   letter-spacing: 10px;
-  border: 7px solid var(--purple)
+  border: 7px solid var(--purple);
 }
 
 /* Stretching Effect!  */
@@ -199,7 +194,6 @@
 
 .btn7:hover:before {
   transform: translateX(100%) translateY(-100%);
-  ;
 }
 .btn7:after {
   content: 'Hover Me!';
@@ -215,5 +209,27 @@
 
 .btn7:hover:after {
   transform: translateX(0%) translateY(0%);
-  ;
+}
+
+/* Text scaling button!  */
+.btn8 {
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.btn8:before {
+  content: 'Hover Me!';
+  color: var(--white);
+  background-color: var(--black);
+  transform: scale(5);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 1;
+}
+
+.btn8:hover:before {
+  transform: scale(1);
+  opacity: 1;
 }
