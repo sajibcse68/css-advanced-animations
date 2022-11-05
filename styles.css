@@ -7,6 +7,7 @@
   --purple: #351435;
   --purple: #351435;
   --red: #f44336;
+  --green: #2ce771;
 }
 
 .buttons-wrap {
@@ -261,3 +262,50 @@
 .btn9:hover:before {
   height: 200%;
 }
+
+/* Rotating 3 layers button!  */
+.btn10 {
+  position: relative;
+  color: var(--white);
+  background-color: var(--yellow);
+  letter-spacing: 2px;
+  /* overflow: hidden; */
+  transition: all 0.5s;
+}
+.btn10:before {
+  content: 'Hover Me!';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--green);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  z-index: 1;
+}
+.btn10:hover:before, .btn10:hover:after {
+  transform: rotateX(0deg);
+}
+.btn10:after {
+  content: 'Hover Me!';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--red);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition-delay: 0.5s;
+  z-index: 1;
+}
+
