@@ -233,3 +233,31 @@
   transform: scale(1);
   opacity: 1;
 }
+
+/* Circular swapping button!  */
+.btn9 {
+  color: tomato;
+  border: 2px solid tomato;
+  background: none;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.btn9:hover {
+  color: var(--white);
+}
+.btn9:before {
+  content: '';
+  position: absolute;
+  background-color: tomato;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 50% 50%;
+  height: 0;
+  z-index: -1;
+}
+
+.btn9:hover:before {
+  height: 200%;
+}
