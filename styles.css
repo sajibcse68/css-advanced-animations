@@ -558,3 +558,51 @@
   bottom: 0;
   right: 25%;
 }
+
+/* Creative border swapping effect! */
+.btn15 {
+  position: relative;
+  color: var(--yellow2);
+  border: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transform: all 0.5s;
+  /* overflow: hidden; */
+}
+.btn15:before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  border-left: 2px solid red;
+  border-right: 2px solid var(--yellow2);
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.btn15:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  border-top: 2px solid red;
+  border-bottom: 2px solid var(--yellow2);
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.btn15:hover:before {
+  transform: rotateY(180deg);
+}
+.btn15:hover:after {
+  transform: rotateX(180deg);
+}
