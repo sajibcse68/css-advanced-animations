@@ -617,7 +617,6 @@
   justify-content: center;
   cursor: pointer;
   transform: all 0.5s;
-  /* overflow: hidden; */
 }
 .btn16:before {
   content: '';
@@ -658,4 +657,44 @@
 .btn16:hover:after {
   width: 100%;
   height: 100%;
+}
+
+/* First letter rotating button! */
+.btn17 {
+  position: relative;
+  color: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transform: all 0.5s;
+  /* overflow: hidden; */
+}
+.btn17 span {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.btn17:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+}
+.btn17:hover:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(15deg);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.btn17:hover span {
+  transform: scale(4) translateX(-6px);
 }
